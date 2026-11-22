@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Fiche mémo — Les intervenants du marché</title><style>
+:root{--prune:#8C1E70;--prune-fonce:#5E1349;--prune-clair:#F4E6EE;--accent:#C77BAA;
+ --vert:#283C28;--gris:#3C3C3C;--gris-moyen:#8A7A85;--filet:#E8DCE5;--creme:#FAF6F8;
+ --ok:#2F7A4F;--ko:#B23B3B;--amb:#B5852A;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--creme);color:var(--gris);
+ font-family:"Nunito","Segoe UI",Helvetica,Arial,sans-serif;font-size:16px;line-height:1.62}
+.wrap{max-width:900px;margin:0 auto;padding:0 18px 60px}
+header.bandeau{background:var(--prune-fonce);color:#fff;padding:18px 0;border-bottom:4px solid var(--accent)}
+header.bandeau .wrap{padding-bottom:0}
+.chapitre{font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:#EAD3E3}
+.chapitre span{color:var(--accent);margin:0 6px}
+h1{font-family:Georgia,"Times New Roman",serif;font-size:27px;line-height:1.25;margin:8px 0 4px;color:#fff}
+.sous{color:#EAD3E3;font-size:14.5px;margin:0}
+h2{font-family:Georgia,"Times New Roman",serif;font-size:20px;color:var(--prune-fonce);
+ margin:34px 0 0;padding-bottom:8px;border-bottom:2px solid var(--filet)}
+h2 .num{color:var(--accent);margin-right:8px}
+h3{font-size:15px;color:var(--vert);margin:20px 0 8px;letter-spacing:.02em}
+.carte{background:#fff;border:1px solid var(--filet);border-radius:10px;padding:20px 22px;margin:18px 0;
+ box-shadow:0 1px 2px rgba(94,19,73,.05)}
+.enc{background:var(--prune-clair);border-left:5px solid var(--prune);padding:14px 18px;
+ border-radius:0 8px 8px 0;margin:18px 0;font-size:15.2px}
+.enc .t{display:block;font-size:11.5px;letter-spacing:.11em;text-transform:uppercase;
+ font-weight:800;color:var(--prune-fonce);margin-bottom:6px}
+.enc.al{background:#FBF4F4;border-left-color:var(--ko)}.enc.al .t{color:var(--ko)}
+.enc.ci{background:#FCF8F0;border-left-color:var(--amb)}.enc.ci .t{color:#8A6418}
+.situ{background:#FCF9FB;border:1px dashed var(--filet);border-radius:8px;padding:16px 18px;margin:16px 0;font-size:15.2px}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:16px 0}
+.duo>div{background:#fff;border:1px solid var(--filet);border-radius:9px;padding:15px 17px;font-size:14.8px}
+.duo .h{font-weight:800;color:var(--prune-fonce);margin-bottom:7px;font-size:14.5px}
+.tri{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:16px 0}
+.tri>div{background:#fff;border:1px solid var(--filet);border-radius:9px;padding:14px 15px;font-size:14.3px}
+.quad{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:16px 0}
+.quad>div{background:#fff;border:1px solid var(--filet);border-radius:9px;padding:12px 13px;font-size:13.6px}
+.quad .h{font-weight:800;color:var(--prune-fonce);margin-bottom:6px;font-size:13px;
+ text-transform:uppercase;letter-spacing:.04em}
+.tri .h{font-weight:800;color:var(--prune-fonce);margin-bottom:6px;font-size:13.5px;
+ text-transform:uppercase;letter-spacing:.05em}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14.8px;background:#fff}
+th,td{border:1px solid var(--filet);padding:9px 12px;text-align:left}
+thead th{background:var(--prune-clair);color:var(--prune-fonce);font-size:13.5px}
+tbody th{font-weight:600;color:var(--gris)}
+td.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+tr.tot td,tr.tot th{background:#FBF3F8;font-weight:800;color:var(--prune-fonce)}
+.dl{display:inline-flex;align-items:center;gap:9px;background:var(--prune);color:#fff;text-decoration:none;
+ padding:11px 20px;border-radius:8px;font-weight:700;font-size:15px;margin:20px 0 4px}
+.dl:hover{background:var(--prune-fonce)}
+ol.q{padding-left:0;list-style:none;counter-reset:q}
+ol.q>li{margin:16px 0;padding-left:38px;position:relative}
+ol.q>li::before{counter-increment:q;content:counter(q);position:absolute;left:0;top:1px;
+ width:26px;height:26px;border-radius:50%;background:var(--prune-clair);color:var(--prune-fonce);
+ font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center}
+b,strong{color:var(--vert)}
+footer{text-align:center;font-size:12.5px;color:var(--gris-moyen);padding:26px 18px 12px;
+ border-top:1px solid var(--filet);margin-top:44px}
+@media(max-width:860px){.quad{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.duo,.tri,.quad{grid-template-columns:1fr}h1{font-size:22px}}
+@media print{body{background:#fff}.dl{display:none}header.bandeau{background:#5E1349 !important;-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+td{vertical-align:top}td:first-child{white-space:nowrap}.tri{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:16px 0}.tri>div{background:#fff;border:1px solid var(--filet);border-radius:9px;padding:14px 15px;font-size:14.3px}.tri .h,.duo .h{font-weight:800;color:var(--prune-fonce);margin-bottom:6px;font-size:13.5px;text-transform:uppercase;letter-spacing:.05em}.duo{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:16px 0}.duo>div{background:#fff;border:1px solid var(--filet);border-radius:9px;padding:15px 17px;font-size:14.8px}@media(max-width:640px){.tri,.duo{grid-template-columns:1fr}}.enc,tr,.tri,.duo{break-inside:avoid}
+.enc p,.cols p{margin:6px 0}.enc.ok{background:#F1F7F3;border-left-color:var(--ok)}.enc.ok .t{color:var(--ok)}
+.cols{display:grid;gap:14px;margin:16px 0}.cols.c2{grid-template-columns:1fr 1fr}.cols.c3{grid-template-columns:repeat(3,1fr)}.cols.c4{grid-template-columns:repeat(4,1fr)}.cols.c5,.cols.c6{grid-template-columns:repeat(3,1fr)}
+.cols>div>.enc{margin:0;height:100%}.cols table{margin:0}
+p.src{font-size:12.5px;color:var(--gris-moyen);line-height:1.5}
+td,th{vertical-align:top}
+@media(max-width:760px){.cols.c2,.cols.c3,.cols.c4,.cols.c5,.cols.c6{grid-template-columns:1fr}}
+table.frise{table-layout:fixed;font-size:13px}.enc h3{margin:2px 0 8px;font-family:Georgia,serif;color:var(--prune-fonce);font-size:16px}
+.cols>div>.enc{margin:0}
+
+/* Frise et cartes (remplacent les tableaux « frise » issus de la conversion du PDF) */
+.etapes{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin:16px 0;counter-reset:etape}
+.etape{position:relative;background:#fff;border:1px solid var(--filet);border-top:4px solid var(--prune);border-radius:8px;padding:12px 12px 11px;font-size:14px;line-height:1.4;color:var(--gris)}
+.etape .tt{display:block;font-weight:800;color:var(--prune-fonce);margin-bottom:5px;font-size:14.5px;line-height:1.25}
+.etape .ref{display:block;margin-top:6px;font-size:12.5px;color:var(--gris-moyen)}
+.etapes.ordre .etape{padding-top:26px}
+.etapes.ordre .etape::before{counter-increment:etape;content:counter(etape);position:absolute;top:-13px;left:12px;width:24px;height:24px;border-radius:50%;background:var(--prune);color:#fff;font-weight:800;font-size:13px;display:flex;align-items:center;justify-content:center}
+.etape.vente{border-top-color:#2E5C8A}.etape.vente .tt{color:#1F4468}.etapes.ordre .etape.vente::before{background:#2E5C8A}
+.etape.alerte{border-top-color:var(--ko)}.etape.alerte .tt{color:var(--ko)}
+@media (max-width:900px){.etapes{grid-template-columns:repeat(3,1fr);row-gap:22px}}@media (max-width:520px){.etapes{grid-template-columns:repeat(2,1fr)}}
+.legende{display:flex;flex-wrap:wrap;gap:14px;font-size:13px;color:var(--gris);margin:-4px 0 14px}
+.legende span::before{content:"";display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-1px;background:var(--prune)}
+.legende .vente::before{background:#2E5C8A}
+</style></head><body>
+<header class="bandeau"><div class="wrap"><div class="chapitre">IOBSP NIVEAU 2 · JOURNÉE 5 · CRÉDIT IMMOBILIER (1/3) — MODULE 2</div><h1>Les intervenants du marché</h1><p class="sous">Fiche mémo détaillée — pour chacun: quel texte l&#x27;encadre, et que n&#x27;a-t-il pas le droit de faire</p></div></header>
+<main class="wrap"><a class="dl" href="J5_M2_Fiche_memo.pdf" download>⬇ Télécharger la fiche mémo (PDF)</a>
+<h2>1 · Statut réglementé ou simple appellation ?</h2>
+<div class="etapes"><div class="etape"><span class="tt">Notaire</span>Officier public et ministériel</div><div class="etape"><span class="tt">Agent immobilier</span>Loi Hoguet · carte professionnelle</div><div class="etape"><span class="tt">CIF</span>Art. L. 541-1 et s. CMF · ORIAS</div><div class="etape"><span class="tt">IOBSP</span>Votre statut · ORIAS</div><div class="etape"><span class="tt">Promoteur</span>Pas de statut unique</div><div class="etape alerte"><span class="tt">CGP</span><b>Pas un statut</b> : une appellation</div></div>
+<p><b>La question qui structure tout le module, pour chaque intervenant: quel texte l&#x27;encadre, et que n&#x27;a-t-il pas le droit de faire ?</b></p>
+<h2>2 · Le notaire</h2>
+<table><thead><tr><th><b>Point</b></th><th><b>Contenu</b></th></tr></thead><tbody><tr><td><b>Statut</b></td><td><b>Officier public et ministériel</b>, nommé par le garde des Sceaux, exerçant une <b>délégation de puissance publique</b>. Ce n&#x27;est pas un commerçant</td></tr><tr><td><b>Prérogative essentielle</b></td><td>Le <b>MONOPOLE DE L&#x27;AUTHENTICITÉ</b>: date certaine, force probante, force exécutoire. En immobilier, la <b>vente</b> et l&#x27;<b>hypothèque</b> passent nécessairement par lui</td></tr><tr><td><b>Rémunération</b></td><td><b>Tarifée</b> — on parle d&#x27;<b>émoluments</b>, fixés par un tarif réglementé, et non d&#x27;honoraires négociés. <i>Barème 2026: voir la fiche</i> <i>mémo de la journée 6</i></td></tr><tr><td><b>Loi Hoguet ?</b></td><td><b>NON.</b> Il intervient dans les transactions immobilières mais relève d&#x27;autres textes. Il peut d&#x27;ailleurs exercer une activité de négociation dans son propre cadre statutaire</td></tr><tr><td><b>Devoir de conseil</b></td><td>Particulièrement <b>étendu</b>, et dû <b>à toutes les parties</b> — pas seulement à celle qui le rémunère</td></tr></tbody></table>
+<h2>3 · L&#x27;agent immobilier — la loi Hoguet</h2>
+<p><b>Loi n° 70-9 du 2 janvier 1970</b>, du nom du député Michel Hoguet. Modifiée notamment par la <b>loi ALUR</b> (2014) et la <b>loi ELAN</b> (2018). Deux objectifs d&#x27;origine: <b>protéger le public contre les détournements de fonds</b> et <b>structurer une profession</b> qui ne l&#x27;était pas.</p>
+<table><thead><tr><th><b>Obligation</b></th><th><b>Contenu</b></th></tr></thead><tbody><tr><td><b>1. Carte professionnelle</b></td><td>Délivrée par le <b>président de la CCI territoriale</b>, pour <b>TROIS ANS</b>, sous conditions d&#x27;<b>aptitude professionnelle</b> et de <b>moralité</b>. <b>T</b> transaction · <b>G</b> gestion · <b>S</b> syndic — <b>une carte par activité exercée</b></td></tr><tr><td><b>2. Garantie financière</b></td><td>Exigée dès qu&#x27;il <b>manie des fonds</b> pour autrui. Exception pour celui qui s&#x27;engage sur l&#x27;honneur à n&#x27;en recevoir aucun</td></tr><tr><td><b>3. RC professionnelle</b></td><td>Obligatoire</td></tr><tr><td><b>4. Mandat écrit — art. 6</b></td><td><b>Le plus important en pratique.</b> L&#x27;agent immobilier ne peut agir qu&#x27;en vertu d&#x27;un <b>mandat écrit</b>. <b>Sans mandat, pas de</b> <b>rémunération</b> — quelle que soit la réalité du travail accompli</td></tr><tr><td><b>5. Formation continue</b></td><td><b>42 heures sur 3 ans</b> (loi ALUR) <i>— volume issu de sources secondaires, à confirmer</i></td></tr></tbody></table>
+<div class="enc al"><p><b>LA SANCTION DE L&#x27;ARTICLE 6 — ET LE PARALLÈLE À FAIRE</b></p><p>Percevoir une somme d&#x27;argent <b>en violation de l&#x27;article 6</b> est un <b>DÉLIT: deux ans d&#x27;emprisonnement et 30 000 € d&#x27;amende</b>.<br><b>Vous reconnaissez la logique de l&#x27;article L. 519-6</b> étudié en journée 4: <b>rien avant que l&#x27;opération n&#x27;aboutisse</b>. Deux professions, deux textes, une même philosophie.</p></div>
+<h2>4 · Promoteur et constructeur — deux métiers distincts</h2>
+<div class="cols c2"><div><div class="enc"><p><b>Le PROMOTEUR immobilier</b><br>Il achète le terrain, monte le programme, fait construire et commercialise. <b>Il VEND UN BIEN QU&#x27;IL PRODUIT.</b><br><b>Pas de carte professionnelle, pas de statut unique</b>: ce qui l&#x27;encadre, ce sont les <b>contrats</b> qu&#x27;il conclut et les <b>garanties</b> qu&#x27;il doit fournir — au premier rang la <b>garantie d&#x27;achèvement</b>.<br><i>Le contrat (VEFA) relève de la journée 7.</i></p></div></div><div><div class="enc"><p><b>Le CONSTRUCTEUR de maisons individuelles</b><br>Il ne vend pas: il <b>CONSTRUIT SUR LE TERRAIN DU CLIENT</b>, qui en est déjà propriétaire.<br>Encadré par le <b>code de la construction et de l&#x27;habitation</b>, régime issu de la <b>loi du 19 décembre 1990</b>.<br>Contrat très protecteur, assorti d&#x27;une <b>garantie de livraison à prix et délais</b> <b>convenus</b>.<br><i>Le contrat (CCMI) relève de la journée 7.</i></p></div></div></div>
+<div class="enc"><span class="t">POURQUOI LA DISTINCTION CHANGE TOUT</span><p>Elle commande la <b>nature du contrat</b>, les <b>garanties</b> exigées et le <b>déblocage des fonds</b>. Ce n&#x27;est pas une nuance de vocabulaire.</p></div>
+<h2>5 · Le conseiller en investissements financiers</h2>
+<table><thead><tr><th><b>Point</b></th><th><b>Contenu</b></th></tr></thead><tbody><tr><td><b>Texte</b></td><td><b>Art. L. 541-1 et suivants</b> du code monétaire et financier</td></tr><tr><td><b>Activité</b></td><td>Recommandations personnalisées sur des <b>instruments financiers</b>, conseil en services d&#x27;investissement</td></tr><tr><td><b>Immatriculation</b></td><td>Au <b>registre unique tenu par l&#x27;ORIAS</b> — <b>le même que le vôtre</b>, catégorie différente. <b>Pas de carte professionnelle</b></td></tr><tr><td><b>Association</b></td><td>Adhésion obligatoire à une association professionnelle <b>agréée par l&#x27;AMF</b> — et <b>non par l&#x27;ACPR</b> (art. L. 541-4)</td></tr><tr><td><b>Fonds</b></td><td><b>Interdiction</b> de recevoir des fonds de ses clients autres que ceux destinés à rémunérer son activité de conseil</td></tr></tbody></table>
+<div class="enc"><span class="t">LE MÉCANISME VOUS EST FAMILIER</span><p>Immatriculation à l&#x27;ORIAS · adhésion à une association agréée · interdiction de recevoir des fonds. <b>C&#x27;est le modèle du filtre associatif</b>, généralisé par le législateur à plusieurs professions — vous l&#x27;avez vu en journée 4 pour les courtiers en opérations de banque. <b>Le mécanisme est le même, l&#x27;autorité</b> <b>diffère.</b></p></div>
+<h2>6 · LE POINT DU MODULE — le conseil en gestion de patrimoine</h2>
+<div class="enc"><p><b>LE CGP N&#x27;EST PAS UN STATUT RÉGLEMENTÉ</b></p><p><b>Pas de carte. Pas de registre propre. Pas d&#x27;autorité de tutelle en tant que tel.</b><br>C&#x27;est une <b>appellation professionnelle</b>: n&#x27;importe qui peut se dire conseiller en gestion de patrimoine.<br><b>Ce qui est réglementé, ce sont les ACTIVITÉS qu&#x27;il exerce</b> — et il en exerce généralement plusieurs.</p></div>
+<table><thead><tr><th><b>S&#x27;il exerce cette activité…</b></th><th><b>… il lui faut ce statut</b></th></tr></thead><tbody><tr><td><b>Conseil sur des instruments financiers</b></td><td><b>CIF</b> — art. L. 541-1 et s. CMF · association agréée par l&#x27;<b>AMF</b></td></tr><tr><td><b>Distribution d&#x27;assurance</b></td><td><b>Intermédiaire en assurance</b> — contrôle de l&#x27;<b>ACPR</b></td></tr><tr><td><b>Présentation d&#x27;opérations de crédit</b></td><td><b>IOBSP</b> — <b>votre statut</b>, immatriculation ORIAS</td></tr><tr><td><b>Transaction immobilière</b></td><td><b>Carte professionnelle</b> au titre de la <b>loi Hoguet</b></td></tr></tbody></table>
+<div class="enc ci"><span class="t">LA FORMULE À RETENIR</span><p><b>Le conseil en gestion de patrimoine est une bannière, pas un statut.</b> Derrière la bannière, il y a autant de statuts que d&#x27;activités exercées — et <b>chacun</b> <b>s&#x27;acquiert séparément</b>, avec ses propres conditions, sa propre immatriculation et sa propre autorité.<br>Conséquence concrète: le cumul de statuts implique le <b>cumul des obligations</b> de formation continue, d&#x27;assurance et d&#x27;adhésion. Ce n&#x27;est pas une addition théorique, c&#x27;est un <b>coût réel</b>.</p></div>
+<h2>7 · Votre frontière à vous</h2>
+<p><b>Le cumul de statuts est parfaitement licite. Ce qui ne l&#x27;est pas, c&#x27;est d&#x27;exercer une activité sans détenir le statut qui la conditionne.</b></p>
+<table><thead><tr><th><b>Votre statut d&#x27;IOBSP vous autorise à…</b></th><th><b>… mais PAS à</b></th></tr></thead><tbody><tr><td><b>Présenter, proposer ou aider à conclure des opérations de banque</b></td><td><b>Négocier la vente du bien</b> — cela suppose une carte professionnelle <b>Recommander un placement financier</b> — cela suppose le statut de CIF <b>Rédiger l&#x27;acte</b> — cela relève du notaire</td></tr></tbody></table>
+<div class="enc"><span class="t">LA RÉCIPROQUE — LA SITUATION LA PLUS FRÉQUENTE SUR LE TERRAIN</span><p>L&#x27;<b>agent immobilier</b> qui, pour faciliter la vente, « <b>trouve le financement</b>» de son acquéreur exerce une activité d&#x27;<b>intermédiation en opérations de</b> <b>banque</b>. <b>S&#x27;il n&#x27;est pas immatriculé pour cela, il est en infraction</b> — deux ans d&#x27;emprisonnement et 6 000 € d&#x27;amende (art. L. 546-4 CMF, journée 4). Savoir le reconnaître sert d&#x27;abord à <b>proposer la bonne solution</b>, qui est le plus souvent un <b>partenariat</b> plutôt qu&#x27;un reproche.</p></div>
+<div class="enc ok"><p><b>CE QUI TOMBE À L&#x27;EXAMEN</b></p><p>• <b>Notaire</b>: officier public et ministériel · <b>monopole de l&#x27;authenticité</b> · émoluments <b>tarifés</b> · <b>NON soumis à la loi Hoguet</b> · devoir de conseil dû à toutes les parties.<br>• <b>Loi Hoguet</b> = loi n° 70-9 du <b>2 janvier 1970</b>. Carte <b>T / G / S</b>, délivrée par la <b>CCI</b> pour <b>3 ans</b>, une par activité.<br>• Ses cinq obligations: carte · garantie financière · RC pro · <b>mandat écrit (art. 6)</b> · formation continue.<br>• <b>Art. 6</b>: percevoir sans mandat = <b>2 ans et 30 000 €</b>. Même philosophie que <b>L. 519-6</b>.<br>• <b>Promoteur</b>: vend ce qu&#x27;il produit · <b>constructeur</b>: bâtit sur le terrain du client.<br>• <b>CIF</b>: L. 541-1 et s. CMF · <b>ORIAS</b>, pas de carte · association agréée par l&#x27;<b>AMF</b> · pas de fonds.<br>• <b>CGP</b>: <b>PAS un statut</b> — une bannière, un cumul de statuts acquis séparément.<br>• L&#x27;agent immobilier qui monte le financement sans être IOBSP est <b>en infraction</b>.</p></div>
+<p class="src"><b>Sources vérifiées au 19 août 2026.</b> <i>Loi n° 70-9 du 2 janvier 1970 (Hoguet), modifiée notamment par les lois ALUR (2014) et ELAN (2018) · code monétaire et financier, art. L. 541-1 et</i> <i>suivants et L. 541-4 (CIF), art. L. 546-4 (défaut d&#x27;immatriculation) · code de la construction et de l&#x27;habitation, régime du constructeur de maisons individuelles issu de la loi du 19</i> <i>décembre 1990 · arrêté du 18 juillet 2022, annexe A. La sanction de l&#x27;article 6 de la loi Hoguet, les conditions de délivrance de la carte professionnelle et sa durée proviennent d&#x27;une</i> <i>source institutionnelle (DGCCRF).</i> <b>Réserves:</b> <i>le volume de formation continue de 42 heures sur trois ans provient de sources secondaires concordantes et non du texte — à confirmer</i> <i>avant de le citer en séance; les sanctions de l&#x27;article 14 de la loi Hoguet n&#x27;ont pas été relevées sur le texte et ne sont pas chiffrées ici. La loi Hoguet ayant été modifiée à plusieurs reprises,</i> <i>vérifier la version en vigueur avant chaque diffusion.</i></p>
+</main>
+<footer>TMK Performances - N° Siret : 49841924100027 - Code NAF : 8559A</footer>
+</body></html>
